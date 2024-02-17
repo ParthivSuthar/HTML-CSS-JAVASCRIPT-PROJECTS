@@ -1,0 +1,174 @@
+/* RESETS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #282c3f;
+    --secondary-color: #000;
+    --padding-inline: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+h4{
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+p {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+/* UTILITIES  */
+
+.container {
+    max-width: 1200px;
+    width: 100vh;
+    margin-inline: auto;
+    padding-inline: var(--padding-inline);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Navbar */
+
+nav {
+    height: 60px;
+    width: 100%;
+    /* background-color: red; */
+    box-shadow: 2px 2px 5px gray;
+    justify-content: space-between;
+    padding-inline: var(--padding-inline);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    gap: 30px;
+    display: flex;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in;
+}
+
+.search-box {
+    gap: 1px;
+    width: 275px;
+}
+
+.search-box .fa-magnifying-glass {
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+.search-box input{
+    height: 37px;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    background-color: aliceblue;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.desktop-icons {
+    gap: 10px;
+}
+
+.profile, .wishlist, .Bag {
+    flex-direction: column;
+}
+
+.show-links {
+    height: 25rem;
+}
+
+.fa-bars {
+    padding: 8px;
+    font-size: 25px;
+}
+
+.nav-toggle {
+    font-size: 1.5rem;
+    color: var(--clr-primary-5);
+    background: transparent;
+    border-color: transparent;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-toggle:hover {
+    color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+
+
+
+
+/* Make Responsive */
+
+@media (max-width: 800px) {
+    .desktop-icons, .search-box {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+
+    nav{
+        height: auto;
+        padding: 2.3rem;
+        margin: 0 auto;
+    }
+
+    #brand {
+        position: absolute;
+        left: 20px;
+        width: 50px;
+        top: 25px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .links {
+        padding: 10px;
+    } 
+}
